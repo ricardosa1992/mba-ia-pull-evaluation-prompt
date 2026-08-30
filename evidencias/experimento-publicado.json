@@ -1,0 +1,279 @@
+{
+  "quando": "2026-08-30T14:11:02+00:00",
+  "experimento": "v2-iteracao-12-final-2a7ef724",
+  "url_experimento": "https://smith.langchain.com/o/cca263ff-b148-4600-94bb-7183ff48d4c9/datasets/fb962127-71df-4b2e-9e05-9360ccd29791/compare?selectedSessions=c095f0f1-a5c3-4e6b-83ba-fc81f6b27db7",
+  "prompt": "ricardosabaini/bug_to_user_story_v2",
+  "prompt_commit": "38ad5dba",
+  "llm_model": "gpt-4o-mini",
+  "eval_model": "gpt-4o",
+  "medias": {
+    "helpfulness": 0.8823,
+    "correctness": 0.8412,
+    "f1_score": 0.8111,
+    "clarity": 0.8933,
+    "precision": 0.8713
+  },
+  "media_geral": 0.8598,
+  "aprovado": true,
+  "exemplos": [
+    {
+      "pos": 1,
+      "nivel": "simple",
+      "bug": "Botão de adicionar ao carrinho não funciona no produto ID 1234.",
+      "run_id": "b695832b-5873-45d9-a793-3a8dce57f04e",
+      "example_id": "69b05114-ec20-4ce8-a002-57ad1c21945c",
+      "notas": {
+        "helpfulness": 0.785,
+        "correctness": 0.835,
+        "f1_score": 1.0,
+        "clarity": 0.9,
+        "precision": 0.67
+      }
+    },
+    {
+      "pos": 2,
+      "nivel": "simple",
+      "bug": "Campo de email aceita texto sem @, permitindo cadastros inválidos.",
+      "run_id": "22c2fae8-9fe3-4a01-8bb7-8120c8bbec7a",
+      "example_id": "1bfbfbdc-6540-4d70-af73-8c7f671c6ae0",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.85,
+        "f1_score": 0.8,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 3,
+      "nivel": "simple",
+      "bug": "No iOS, ao girar o celular para landscape, o layout da tela de perfil fica quebrado.",
+      "run_id": "d50f2d3c-b294-40cd-b062-b5db806b6a93",
+      "example_id": "df149195-c065-4c7e-a48c-336a2cddff45",
+      "notas": {
+        "helpfulness": 0.975,
+        "correctness": 1.0,
+        "f1_score": 1.0,
+        "clarity": 0.95,
+        "precision": 1.0
+      }
+    },
+    {
+      "pos": 4,
+      "nivel": "simple",
+      "bug": "Dashboard mostra contagem errada de usuários ativos. Mostra 50 mas só há 42 na lista.",
+      "run_id": "9f375f70-7d70-4508-b244-a9ea459bf52e",
+      "example_id": "8bf1442b-9fd4-4d51-aa34-e3c9a37b7a5f",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.85,
+        "f1_score": 0.8,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 5,
+      "nivel": "simple",
+      "bug": "Imagens de produtos não aparecem no Safari. No Chrome funciona normal.",
+      "run_id": "c8fab69f-8521-438e-9ac5-39b1079fa9b8",
+      "example_id": "35dd037b-6258-4112-a07e-b49873e0fca1",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.85,
+        "f1_score": 0.8,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 6,
+      "nivel": "medium",
+      "bug": "Webhook de pagamento aprovado não está sendo chamado.\n\nSteps to reproduce:\n1. Fazer pedido de R$ 100\n2. Pagar com cartão de crédito\n3. Pagamento é aprovado no gateway\n4. Sistema não recebe notificação\n5. Status do pedido fica como \"pendente\"\n\nLogs do gateway mostram: HTTP 500 ao tentar POST /api/webhooks/payment",
+      "run_id": "ba90095f-39cb-43bc-abfa-1b9f7e8f52a7",
+      "example_id": "9169cae0-f0e9-457e-b418-5d901159eba0",
+      "notas": {
+        "helpfulness": 0.84,
+        "correctness": 0.815,
+        "f1_score": 0.8,
+        "clarity": 0.85,
+        "precision": 0.83
+      }
+    },
+    {
+      "pos": 7,
+      "nivel": "medium",
+      "bug": "Relatório de vendas demora mais de 2 minutos para gerar quando filtro ultrapassa 1000 registros.\n\nDetalhes:\n- Query SQL está sem index na coluna data_venda\n- Timeout do navegador após 120 segundos\n- Usuários reclamando de lentidão no horário comercial",
+      "run_id": "230baa51-46df-4f54-95b7-27bb0d29bc0f",
+      "example_id": "8b05670e-2195-4425-851d-d625b724cf2c",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.9,
+        "f1_score": 0.9,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 8,
+      "nivel": "medium",
+      "bug": "Endpoint /api/users/:id retorna dados de qualquer usuário sem validar permissões.\n\nExemplo:\n- Usuário comum (ID 100) consegue acessar GET /api/users/1 (admin)\n- Recebe email, telefone, endereço do admin\n- Apenas admins deveriam ver dados de outros usuários\n\nSeveridade: ALTA - vazamento de dados pessoais",
+      "run_id": "baa4a310-86dd-40c9-a680-3fe3caa0372d",
+      "example_id": "554e9c27-9604-4ae4-b8b7-633d7d059040",
+      "notas": {
+        "helpfulness": 0.875,
+        "correctness": 0.8234,
+        "f1_score": 0.7467,
+        "clarity": 0.85,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 9,
+      "nivel": "medium",
+      "bug": "Pipeline de vendas calcula valor total errado quando há desconto.\n\nCenário:\n- Produto A: R$ 1.000\n- Produto B: R$ 500\n- Desconto: 10%\n- Valor esperado: R$ 1.350\n- Valor mostrado: R$ 1.400\n\nO sistema aplica desconto só no primeiro produto.",
+      "run_id": "9652635e-5415-469f-9987-8c1e9380c3a4",
+      "example_id": "77511332-b918-4e63-b12a-742b64ea34fb",
+      "notas": {
+        "helpfulness": 0.735,
+        "correctness": 0.735,
+        "f1_score": 0.8,
+        "clarity": 0.8,
+        "precision": 0.67
+      }
+    },
+    {
+      "pos": 10,
+      "nivel": "medium",
+      "bug": "App Android trava ao carregar lista de notificações com mais de 50 itens.\n\nObservações:\n- Tela fica congelada por 5-10 segundos\n- ANR (Application Not Responding) em alguns casos\n- Lista não está usando paginação\n- Carrega tudo de uma vez na Thread principal",
+      "run_id": "f1ab0be5-66ef-4d6f-87e1-2315e973bd44",
+      "example_id": "b27e026b-f783-4538-892c-9422cb64e0b7",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.8736,
+        "f1_score": 0.8471,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 11,
+      "nivel": "medium",
+      "bug": "Carrinho permite finalizar compra mesmo com produto fora de estoque.\n\nFluxo do bug:\n1. Produto tem 2 unidades em estoque\n2. Cliente A adiciona 2 unidades ao carrinho\n3. Estoque fica zerado\n4. Cliente B ainda consegue adicionar ao carrinho\n5. Cliente B finaliza compra\n6. Sistema gera pedido mas não tem estoque para enviar",
+      "run_id": "f3de2e36-4037-4a67-b997-ef289e9e5668",
+      "example_id": "1246075e-d93c-4b8f-8c2e-99b99d4eeba0",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.7929,
+        "f1_score": 0.6857,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 12,
+      "nivel": "medium",
+      "bug": "Modal de confirmação de exclusão aparece atrás do menu lateral em telas pequenas (< 768px).\n\nDetalhes:\n- z-index do modal: 1000\n- z-index do menu lateral: 1050\n- Usuários não conseguem clicar nos botões do modal\n- Precisam fechar o menu lateral antes",
+      "run_id": "29233f95-3580-43f8-8308-d0285ffc997f",
+      "example_id": "2a07d671-7037-4899-b625-3c311ed37251",
+      "notas": {
+        "helpfulness": 0.925,
+        "correctness": 0.8736,
+        "f1_score": 0.8471,
+        "clarity": 0.95,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 13,
+      "nivel": "complex",
+      "bug": "Sistema de checkout com múltiplas falhas críticas.\n\nPROBLEMAS IDENTIFICADOS:\n\n1. SEGURANÇA - XSS no campo de cupom:\n   - Input: <script>alert('xss')</script>\n   - Sistema executa o script\n   - Não há sanitização de entrada\n\n2. INTEGRAÇÃO - Gateway de pagamento retorna erro intermitente:\n   - POST /api/payment/process retorna 504 Gateway Timeout em 30% dos casos\n   - Clientes são cobrados mas pedido não é criado\n   - Logs: \"Connection pool exhausted\" no Postgres\n\n3. LÓGICA DE NEGÓCIO - Race condition em cupons de desconto:\n   - Cupom \"PROMO10\" (limite: 100 usos)\n   - Sistema permitiu 147 usos\n   - Verificação de limite não é atômica\n\n4. UX - Loading infinito após timeout:\n   - Se pagamento demora > 30s\n   - Tela fica com spinner eternamente\n   - Usuário não sabe se pagamento foi processado\n\nIMPACTO:\n- 150+ clientes afetados na última semana\n- Perda estimada: R$ 15.000 em cupons indevidos\n- 45 tickets de suporte abertos\n- Rating do app caiu de 4.5 para 3.2 estrelas",
+      "run_id": "25aa35ca-76e8-41c1-842f-53e8561d03d9",
+      "example_id": "82f0a235-3937-4af8-a76d-3ea4a8ef96d9",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.8234,
+        "f1_score": 0.7467,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 14,
+      "nivel": "complex",
+      "bug": "Sistema de relatórios gerenciais com problemas severos de performance e dados incorretos.\n\nCONTEXTO:\nAplicação SaaS B2B com 500+ empresas clientes, cada uma com 50-5000 usuários.\n\nPROBLEMAS:\n\n1. PERFORMANCE - Query N+1 no dashboard executivo:\n   - Endpoint: GET /api/reports/executive-dashboard\n   - Para cada empresa, faz query separada para buscar métricas\n   - 1 cliente com 100 departamentos = 101 queries\n   - Tempo de resposta: 45 segundos (SLA: 3s)\n   - Database CPU: 95% em horário de pico\n\n   Stack trace:\n   ```\n   SELECT * FROM metrics WHERE company_id = ?  (executado 100x)\n   SELECT * FROM users WHERE company_id = ?     (executado 100x)\n   SELECT * FROM licenses WHERE company_id = ?  (executado 100x)\n   ```\n\n2. LÓGICA DE NEGÓCIO - Cálculo de MRR (Monthly Recurring Revenue) inconsistente:\n   - Dashboard mostra: R$ 150.000 MRR\n   - Relatório financeiro: R$ 145.000 MRR\n   - Planilha contábil: R$ 147.500 MRR\n\n   Causas identificadas:\n   - Dashboard: considera cancelamentos do mês anterior\n   - Relatório: só considera assinaturas ativas\n   - Contábil: considera pró-rata de upgrades/downgrades\n   - Nenhuma fonte está 100% correta\n\n3. CACHE - Cache Redis desatualizado causa dados old:\n   - TTL do cache: 24 horas\n   - Cliente faz upgrade de plano\n   - Dashboard ainda mostra plano antigo por até 24h\n   - Invalidação manual não funciona corretamente\n\n4. CONCORRÊNCIA - Exportação de CSV trava servidor:\n   - Exportar relatório anual (365 dias, 50k linhas)\n   - Process fica em 100% CPU por 5 minutos\n   - Outras requisições ficam lentas\n   - Memória cresce até 4GB (limite: 2GB) → OOM Kill\n\nIMPACTO BUSINESS:\n- 15 clientes enterprise ameaçando cancelar contrato\n- CEO não confia nos números para apresentar ao board\n- Time de CS gastando 40h/semana explicando discrepâncias\n- Impossível fazer forecasting confiável",
+      "run_id": "74a54120-4c3d-4426-b26a-a04a86599b1a",
+      "example_id": "a1f4a899-6d00-4e9a-b69f-2b79933ebb63",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.7731,
+        "f1_score": 0.6462,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    },
+    {
+      "pos": 15,
+      "nivel": "complex",
+      "bug": "App de produtividade offline-first com bugs críticos de sincronização.\n\nCONTEXTO:\nApp mobile (iOS + Android) que funciona offline e sincroniza quando tem internet.\nUsuários: vendedores em campo, muitas vezes sem conexão.\n\nPROBLEMAS REPORTADOS:\n\n1. CONFLITO DE DADOS - Merge incorreto causa perda de dados:\n\n   Cenário:\n   - Usuário A (offline) edita tarefa #123: \"Ligar para cliente X às 14h\"\n   - Usuário B (offline) edita mesma tarefa: \"Ligar para cliente X às 15h (reagendado)\"\n   - Ambos sincronizam\n   - Sistema aplica \"last write wins\" → dados do usuário A perdidos\n   - Usuário A não sabe que seu agendamento foi sobrescrito\n\n   Impacto: 30+ casos de compromissos perdidos na última semana\n\n2. SINCRONIZAÇÃO - Upload infinito de anexos grandes:\n\n   Cenário:\n   - Usuário anexa PDF de 50MB em uma tarefa\n   - Inicia upload via 4G\n   - Conexão cai no meio (sinal fraco)\n   - App reinicia upload do zero (não retoma)\n   - Após 5 tentativas, desiste mas não avisa o usuário\n   - Tarefa fica \"sincronizada\" mas sem anexo\n\n   Logs:\n   ```\n   [SYNC] Uploading attachment.pdf (50MB)... 40% complete\n   [NETWORK] Connection lost\n   [SYNC] Retry 1/5 - Restarting from 0%\n   [SYNC] Uploading attachment.pdf (50MB)... 35% complete\n   [NETWORK] Connection lost\n   [SYNC] Retry 2/5 - Restarting from 0%\n   ...\n   [SYNC] Max retries exceeded. Giving up.\n   [ERROR] Upload failed but status marked as synced\n   ```\n\n3. ORDENAÇÃO - Operações aplicadas fora de ordem no servidor:\n\n   Cenário offline (usuário sem internet por 2 horas):\n   - 10:00 - Cria tarefa \"Tarefa A\"\n   - 10:15 - Edita \"Tarefa A\" → \"Tarefa A - Urgente\"\n   - 10:30 - Deleta \"Tarefa A\"\n\n   Ao sincronizar:\n   - Servidor recebe DELETE antes do CREATE (ordem errada)\n   - Tenta deletar tarefa que não existe → erro 404\n   - CREATE e UPDATE são aplicados depois\n   - Resultado: tarefa existe (deveria estar deletada)\n   - Timestamp client-side não é respeitado\n\n4. MEMÓRIA - App crasha ao sincronizar 1000+ itens pendentes:\n\n   Cenário:\n   - Usuário fica 1 semana offline\n   - Acumula 1.500 operações pendentes (create, update, delete)\n   - Volta para área com WiFi\n   - App tenta sincronizar tudo de uma vez\n   - Carrega todos os 1.500 itens na memória\n   - iOS: Memory Warning → App crashado pelo OS\n   - Android: OutOfMemoryError\n\n   Memória medida: 850MB (limite iOS: 700MB)\n\nIMPACTO:\n- 250+ usuários afetados\n- NPS caiu de 8.5 para 4.2\n- 80% dos reviews negativos mencionam \"perda de dados\"\n- Churn rate aumentou 15% no último mês\n- Time de vendas perdeu R$ 200k em oportunidades por dados perdidos",
+      "run_id": "0d1b12a3-1981-4337-b492-cfb1ef05a27d",
+      "example_id": "352ee768-c854-498d-83a7-4b9ffbffa816",
+      "notas": {
+        "helpfulness": 0.9,
+        "correctness": 0.8234,
+        "f1_score": 0.7467,
+        "clarity": 0.9,
+        "precision": 0.9
+      }
+    }
+  ],
+  "traces": [
+    {
+      "nivel": "simple",
+      "pos": 1,
+      "run_id": "b695832b-5873-45d9-a793-3a8dce57f04e",
+      "url_publica": "https://smith.langchain.com/public/07b169ee-c1c7-4b23-8540-70c6041960a9/r"
+    },
+    {
+      "nivel": "medium",
+      "pos": 6,
+      "run_id": "ba90095f-39cb-43bc-abfa-1b9f7e8f52a7",
+      "url_publica": "https://smith.langchain.com/public/c74d2c7e-413a-41c2-bc0f-3ab54b63e187/r"
+    },
+    {
+      "nivel": "complex",
+      "pos": 13,
+      "run_id": "25aa35ca-76e8-41c1-842f-53e8561d03d9",
+      "url_publica": "https://smith.langchain.com/public/bbe9e000-a5a7-4bd3-8b3d-f384f2e57fae/r"
+    }
+  ],
+  "dataset_publico": {
+    "url": "https://smith.langchain.com/public/b1b50576-9889-4351-8126-398830b26cb3/d",
+    "share_token": "b1b50576-9889-4351-8126-398830b26cb3"
+  },
+  "experimentos_publicos": [
+    "v2-iteracao-12-final-2a7ef724"
+  ],
+  "stats_publicos": {
+    "clarity": {
+      "n": 14,
+      "avg": 0.8964
+    },
+    "correctness": {
+      "n": 14,
+      "avg": 0.8425
+    },
+    "f1_score": {
+      "n": 14,
+      "avg": 0.8157
+    },
+    "helpfulness": {
+      "n": 14,
+      "avg": 0.8829
+    },
+    "precision": {
+      "n": 14,
+      "avg": 0.8693
+    }
+  }
+}

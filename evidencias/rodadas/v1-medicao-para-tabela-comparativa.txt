@@ -1,0 +1,50 @@
+======================================================================
+MEDICAO DO PROMPT V1: leonanluppi/bug_to_user_story_v1
+======================================================================
+Provider: openai
+Modelo gerador: gpt-4o-mini
+Modelo juiz:    gpt-4o
+Dataset: mba-ia-pull-evaluation-prompt-eval (15 exemplos)
+
+   [1/15] complex F1:0.75 Clarity:0.85 Precision:0.90 | chars 2139 vs ref 5756
+   [2/15] complex F1:0.75 Clarity:0.95 Precision:0.90 | chars 2083 vs ref 4649
+   [3/15] complex F1:0.75 Clarity:0.90 Precision:0.90 | chars 1541 vs ref 3605
+   [4/15] medium  F1:0.60 Clarity:0.85 Precision:0.90 | chars 574 vs ref 873
+   [5/15] medium  F1:0.69 Clarity:0.90 Precision:0.80 | chars 917 vs ref 963
+   [6/15] medium  F1:0.85 Clarity:0.90 Precision:0.90 | chars 755 vs ref 768
+   [7/15] medium  F1:0.77 Clarity:0.90 Precision:0.83 | chars 823 vs ref 781
+   [8/15] medium  F1:0.75 Clarity:0.90 Precision:0.90 | chars 857 vs ref 849
+   [9/15] medium  F1:0.80 Clarity:0.90 Precision:0.90 | chars 710 vs ref 704
+   [10/15] medium  F1:0.69 Clarity:0.90 Precision:0.80 | chars 934 vs ref 664
+   [11/15] simple  F1:0.80 Clarity:0.85 Precision:0.90 | chars 476 vs ref 403
+   [12/15] simple  F1:0.67 Clarity:0.90 Precision:0.90 | chars 536 vs ref 447
+   [13/15] simple  F1:0.69 Clarity:0.75 Precision:0.67 | chars 240 vs ref 425
+   [14/15] simple  F1:0.80 Clarity:0.90 Precision:0.90 | chars 564 vs ref 389
+   [15/15] simple  F1:1.00 Clarity:0.90 Precision:0.90 | chars 626 vs ref 408
+
+======================================================================
+Prompt: leonanluppi/bug_to_user_story_v1
+======================================================================
+
+Metricas Derivadas:
+  - Helpfulness: 0.8750 OK
+  - Correctness: 0.8111 OK
+
+Metricas Base:
+  - f1_score: 0.7555 ABAIXO
+  - clarity: 0.8833 OK
+  - precision: 0.8667 OK
+
+----------------------------------------------------------------------
+MEDIA GERAL: 0.8383
+----------------------------------------------------------------------
+
+STATUS: REPROVADO. Abaixo de 0.8: f1_score
+
+Por nivel de complexidade:
+  nivel      n      F1  Clarity  Precision
+  simple     5   0.790    0.860      0.854
+  medium     7   0.734    0.893      0.861
+  complex    3   0.747    0.900      0.900
+
+Nenhuma falha de juiz ou de geracao. Rodada valida.

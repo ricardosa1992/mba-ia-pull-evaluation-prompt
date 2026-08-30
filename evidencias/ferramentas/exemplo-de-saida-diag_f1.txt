@@ -1,0 +1,48 @@
+==============================================================================
+POS 2 | nivel complex
+tamanho: gerado 2879 chars | referencia 4649 chars (62%)
+bullets: gerado 20 | referencia 45
+F1 0.75  = precision 0.80 / recall 0.70
+  F1 reasoning: A resposta gerada cobre muitos aspectos corretos e relevantes, como a necessidade de melhorar a performance do dashboard e a consistência do MRR. No entanto, há algumas imprecisões, como a CPU do banco de dados estar abaixo de 80% em vez de 70%. A resposta também omite detalhes importantes, como a necessidade de exportação assíncrona e a estratégia de cache híbrida. A precisão é alta devido à relevância das informações, mas o recall é menor devido à omissão de alguns critérios de aceitação e detalhes técnicos específicos.
+PRECISION 0.90
+  reasoning: A resposta gerada é precisa e aborda diretamente os problemas apresentados, sem alucinações. Ela fornece uma user story relevante e critérios de aceitação que refletem os problemas técnicos e de negócios descritos. No entanto, a resposta poderia ser mais focada ao evitar detalhes excessivos sobre soluções técnicas, que não foram explicitamente solicitadas. As informações são factualmente corretas e consistentes com o contexto fornecido, mas a inclusão de exemplos de queries e estratégias técnicas pode ser considerada além do necessário para a pergunta original.
+==============================================================================
+POS 4 | nivel medium
+tamanho: gerado 696 chars | referencia 873 chars (80%)
+bullets: gerado 9 | referencia 12
+F1 0.69  = precision 0.80 / recall 0.60
+  F1 reasoning: A resposta gerada cobre corretamente o problema do z-index e a necessidade do modal aparecer sobre o menu lateral, mas omite detalhes importantes como o foco do teclado, a possibilidade de fechar com ESC e o backdrop clicável. A precisão é alta, pois as informações fornecidas são corretas e relevantes, mas a recall é menor devido à ausência de critérios de acessibilidade e detalhes sobre o tamanho do modal e o desfoque do menu lateral.
+PRECISION 0.67
+  reasoning: A resposta gerada é precisa em termos de contexto técnico e critérios de aceitação, mas falta em acessibilidade e detalhes adicionais. Não há alucinações, pois todas as informações são baseadas no problema apresentado. No entanto, a resposta não aborda critérios de acessibilidade, como foco do teclado e fechamento com ESC, que estão presentes na resposta esperada. A correção factual é alta, mas não completa, pois não menciona o ajuste do z-index para mais de 1050. A média dos critérios resulta em um score de 0.67.
+==============================================================================
+POS 5 | nivel medium
+tamanho: gerado 680 chars | referencia 963 chars (71%)
+bullets: gerado 8 | referencia 13
+F1 0.55  = precision 0.60 / recall 0.50
+  F1 reasoning: A resposta gerada aborda corretamente a necessidade de impedir a finalização de compras com produtos fora de estoque, mas omite detalhes importantes como a validação em tempo real e a exibição de mensagens claras sobre a indisponibilidade. A resposta também inclui informações corretas sobre a atualização do estoque e a impossibilidade de adicionar produtos ao carrinho quando o estoque é zero. No entanto, falta mencionar a reserva temporária de estoque e o aviso de 'estoque limitado', que são cruciais para a prevenção do problema.
+PRECISION 0.67
+  reasoning: A resposta gerada é precisa em termos de identificar o problema de permitir a finalização de compras com produtos fora de estoque, mas contém algumas alucinações. Por exemplo, menciona que o estoque deve ser atualizado para 0 unidades, o que já ocorre no fluxo do bug descrito. A resposta está focada na pergunta, mas não aborda a necessidade de validação em tempo real no checkout, como na resposta esperada. As informações são factualmente corretas, mas não tão detalhadas quanto a referência, especialmente em termos de prevenção e comunicação ao cliente.
+==============================================================================
+POS 8 | nivel medium
+tamanho: gerado 787 chars | referencia 849 chars (93%)
+bullets: gerado 5 | referencia 13
+F1 0.62  = precision 0.80 / recall 0.50
+  F1 reasoning: A resposta gerada aborda corretamente a necessidade de validação de permissões e a severidade do problema, mas omite detalhes importantes como o acesso permitido para administradores e o registro em log de auditoria. A precisão é alta, pois as informações fornecidas são relevantes e corretas, mas a resposta não cobre todos os critérios de aceitação, resultando em um recall mais baixo. A menção ao HTTP 403 e a proteção de dados sensíveis está correta, mas faltam detalhes sobre o contexto de segurança e ações específicas para administradores.
+PRECISION 0.67
+  reasoning: A resposta gerada é precisa em termos de identificar a necessidade de validação de permissões e o impacto do problema, mas apresenta alucinações ao sugerir que o usuário comum deseja a validação, o que não é mencionado na pergunta. A resposta está focada na questão de segurança, mas não aborda completamente os critérios de aceitação esperados, como o acesso de administradores e o registro em log. Factualmente, a resposta está correta ao identificar a necessidade de um código HTTP 403, mas falta mencionar o acesso de administradores. A média reflete essas observações.
+==============================================================================
+POS 9 | nivel medium
+tamanho: gerado 883 chars | referencia 704 chars (125%)
+bullets: gerado 12 | referencia 9
+F1 0.55  = precision 0.60 / recall 0.50
+  F1 reasoning: A resposta gerada menciona a necessidade de otimizar a query SQL e adicionar um índice, que são informações corretas e relevantes. No entanto, ela estabelece um tempo de geração de relatório de até 120 segundos, que é incorreto, pois a expectativa é de menos de 30 segundos. A resposta também omite a necessidade de desempenho consistente em horário de pico e não menciona a performance esperada de menos de 30 segundos para qualquer volume. Assim, a precisão é penalizada por informações incorretas e o recall por omissões importantes.
+PRECISION 0.67
+  reasoning: A resposta gerada não contém alucinações, pois todas as informações são baseadas em fatos conhecidos, como a necessidade de otimizar a query SQL e adicionar um índice. No entanto, a resposta não está totalmente focada na pergunta, pois inclui detalhes como notificações que não foram mencionados na pergunta original. Em termos de correção factual, a resposta sugere um tempo de geração de relatório de até 120 segundos, enquanto a referência esperava menos de 30 segundos, o que é uma imprecisão. Portanto, a média dos critérios resulta em um score de 0.67.
+==============================================================================
+POS 11 | nivel simple
+tamanho: gerado 404 chars | referencia 403 chars (100%)
+bullets: gerado 5 | referencia 5
+F1 0.80  = precision 0.80 / recall 0.80
+  F1 reasoning: A resposta gerada cobre a intenção principal de visualizar imagens no Safari para tomar decisões de compra, semelhante à resposta esperada. Critérios como 'imagens exibidas corretamente' e 'visíveis como no Chrome' são relevantes e corretos. No entanto, a resposta gerada omite o critério de 'tempo de carregamento similar' e inclui 'não deve haver erros de carregamento', que não está na resposta esperada. Assim, a precisão e o recall são ambos 0.8, pois a maioria das informações relevantes está presente, mas há pequenas omissões e adições.
+PRECISION 0.67
+  reasoning: A resposta gerada não contém alucinações, pois descreve corretamente o problema de visualização de imagens no Safari, resultando em uma pontuação de 1.0 para ausência de alucinações. No entanto, a resposta não está totalmente focada na pergunta, pois inclui detalhes sobre erros de carregamento que não foram mencionados na pergunta original, resultando em uma pontuação de 0.5 para foco na pergunta. Em termos de correção factual, a resposta é precisa, mas não menciona a qualidade e o tempo de carregamento das imagens, como na referência, resultando em uma pontuação de 0.5 para correção factual.

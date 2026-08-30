@@ -1,0 +1,79 @@
+
+==================================================
+AVALIAÇÃO DE PROMPTS OTIMIZADOS
+==================================================
+
+Provider: openai
+Modelo Principal: gpt-4o-mini
+Modelo de Avaliação: gpt-4o
+
+Criando dataset de avaliação: mba-ia-pull-evaluation-prompt-eval...
+   ✓ Carregados 15 exemplos do arquivo datasets/bug_to_user_story.jsonl
+   ✓ Dataset 'mba-ia-pull-evaluation-prompt-eval' já existe, usando existente
+
+======================================================================
+PROMPTS PARA AVALIAR
+======================================================================
+
+Este script irá puxar prompts do LangSmith Hub.
+Certifique-se de ter feito push dos prompts antes de avaliar:
+  python src/push_prompts.py
+
+
+🔍 Avaliando: ricardosabaini/bug_to_user_story_v2
+   Puxando prompt do LangSmith Hub: ricardosabaini/bug_to_user_story_v2
+   ✓ Prompt carregado com sucesso
+   Dataset: 15 exemplos
+   Avaliando exemplos...
+      [1/15] F1:0.75 Clarity:0.85 Precision:0.90
+      [2/15] F1:0.75 Clarity:0.90 Precision:0.90
+      [3/15] F1:0.82 Clarity:0.85 Precision:0.90
+      [4/15] F1:0.85 Clarity:0.95 Precision:0.90
+      [5/15] F1:0.55 Clarity:0.85 Precision:0.67
+      [6/15] F1:0.72 Clarity:0.90 Precision:0.90
+      [7/15] F1:0.80 Clarity:0.80 Precision:0.67
+      [8/15] F1:0.75 Clarity:0.90 Precision:0.90
+      [9/15] F1:0.90 Clarity:0.90 Precision:0.90
+      [10/15] F1:0.65 Clarity:0.80 Precision:0.67
+      [11/15] F1:0.85 Clarity:0.90 Precision:0.90
+      [12/15] F1:0.80 Clarity:0.90 Precision:0.90
+      [13/15] F1:0.80 Clarity:0.90 Precision:1.00
+      [14/15] F1:0.80 Clarity:0.90 Precision:0.90
+      [15/15] F1:0.90 Clarity:0.90 Precision:0.67
+
+==================================================
+Prompt: ricardosabaini/bug_to_user_story_v2
+==================================================
+
+Métricas Derivadas:
+  - Helpfulness: 0.86 ✓
+  - Correctness: 0.81 ✓
+
+Métricas Base:
+  - F1-Score: 0.78 ✗
+  - Clarity: 0.88 ✓
+  - Precision: 0.85 ✓
+
+--------------------------------------------------
+📊 MÉDIA GERAL: 0.8356
+--------------------------------------------------
+
+❌ STATUS: REPROVADO
+⚠️  Métricas abaixo de 0.8: f1_score
+⚠️  Média atual: 0.8356 | Necessário: 0.8000
+
+==================================================
+RESUMO FINAL
+==================================================
+
+Prompts avaliados: 1
+Aprovados: 0
+Reprovados: 1
+
+⚠️  Alguns prompts não atingiram todas as métricas >= 0.8
+
+Próximos passos:
+1. Refatore os prompts com score baixo
+2. Faça push novamente: python src/push_prompts.py
+3. Execute: python src/evaluate.py novamente
+EXIT CODE: 1

@@ -1,0 +1,133 @@
+==============================================================================
+PUBLICACAO DO EXPERIMENTO NO LANGSMITH
+==============================================================================
+dataset : mba-ia-pull-evaluation-prompt-eval
+gerador : gpt-4o-mini | juiz: gpt-4o
+exemplos: 15
+Puxando prompt do Hub: ricardosabaini/bug_to_user_story_v2
+   commit 38ad5dba
+
+Rodando experimento (concorrencia 3)...
+View the evaluation results for experiment: 'v2-iteracao-12-final-2a7ef724' at:
+https://smith.langchain.com/o/cca263ff-b148-4600-94bb-7183ff48d4c9/datasets/fb962127-71df-4b2e-9e05-9360ccd29791/compare?selectedSessions=c095f0f1-a5c3-4e6b-83ba-fc81f6b27db7
+
+
+0it [00:00, ?it/s]1it [00:14, 14.77s/it]2it [00:21,  9.75s/it]3it [00:26,  7.89s/it]4it [00:28,  5.37s/it]5it [00:29,  3.83s/it]6it [00:36,  4.93s/it]7it [00:37,  3.65s/it]9it [00:43,  3.42s/it]10it [00:45,  2.96s/it]11it [00:45,  2.30s/it]12it [00:52,  3.49s/it]13it [00:52,  2.62s/it]14it [00:54,  2.48s/it]15it [01:00,  3.42s/it]15it [01:00,  4.05s/it]
+
+==============================================================================
+NOTAS POR EXEMPLO (na ordem do arquivo .jsonl)
+==============================================================================
+pos  nivel        F1   Clar   Prec  bug
+  1  simple     1.00   0.90   0.67  Botão de adicionar ao carrinho não funciona 
+  2  simple     0.80   0.90   0.90  Campo de email aceita texto sem @, permitind
+  3  simple     1.00   0.95   1.00  No iOS, ao girar o celular para landscape, o
+  4  simple     0.80   0.90   0.90  Dashboard mostra contagem errada de usuários
+  5  simple     0.80   0.90   0.90  Imagens de produtos não aparecem no Safari. 
+  6  medium     0.80   0.85   0.83  Webhook de pagamento aprovado não está sendo
+  7  medium     0.90   0.90   0.90  Relatório de vendas demora mais de 2 minutos
+  8  medium     0.75   0.85   0.90  Endpoint /api/users/:id retorna dados de qua
+  9  medium     0.80   0.80   0.67  Pipeline de vendas calcula valor total errad
+ 10  medium     0.85   0.90   0.90  App Android trava ao carregar lista de notif
+ 11  medium     0.69   0.90   0.90  Carrinho permite finalizar compra mesmo com 
+ 12  medium     0.85   0.95   0.90  Modal de confirmação de exclusão aparece atr
+ 13  complex    0.75   0.90   0.90  Sistema de checkout com múltiplas falhas crí
+ 14  complex    0.65   0.90   0.90  Sistema de relatórios gerenciais com problem
+ 15  complex    0.75   0.90   0.90  App de produtividade offline-first com bugs 
+
+F1 medio por nivel de complexidade:
+   simple   0.8800  (5 exemplos)
+   medium   0.8038  (7 exemplos)
+   complex  0.7132  (3 exemplos)
+
+==============================================================================
+AGREGADO DO EXPERIMENTO
+==============================================================================
+   helpfulness    0.8823  [OK]
+   correctness    0.8412  [OK]
+   f1_score       0.8111  [OK]
+   clarity        0.8933  [OK]
+   precision      0.8713  [OK]
+   MEDIA GERAL    0.8598
+
+STATUS: APROVADO (corte 0.8)
+Escrito: evidencias\experimento-publicado.json
+Nada compartilhado ainda. Para publicar os links:
+   python evidencias/ferramentas/publica_experimento.py --so-links
+
+==============================================================================
+LINKS PUBLICOS
+==============================================================================
+dataset  https://smith.langchain.com/public/b1b50576-9889-4351-8126-398830b26cb3/d
+         HTTP 200 sem credencial, 15 exemplos
+         1 experimento(s) na pagina publica:
+           - v2-iteracao-12-final-2a7ef724
+trace simple   pos 1   https://smith.langchain.com/public/07b169ee-c1c7-4b23-8540-70c6041960a9/r  HTTP 200
+trace medium   pos 6   https://smith.langchain.com/public/c74d2c7e-413a-41c2-bc0f-3ab54b63e187/r  HTTP 200
+trace complex  pos 13  https://smith.langchain.com/public/bbe9e000-a5a7-4bd3-8b3d-f384f2e57fae/r  HTTP 200
+
+Escrito: evidencias\links-publicos.md
+
+==============================================================================
+LINKS PUBLICOS
+==============================================================================
+Traceback (most recent call last):
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\venv\Lib\site-packages\langsmith\utils.py", line 150, in raise_for_status_with_text
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: https://api.smith.langchain.com/datasets/fb962127-71df-4b2e-9e05-9360ccd29791/share
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\venv\Lib\site-packages\langsmith\client.py", line 759, in request_with_retries
+    ls_utils.raise_for_status_with_text(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\venv\Lib\site-packages\langsmith\utils.py", line 152, in raise_for_status_with_text
+    raise requests.HTTPError(str(e), response.text) from e  # type: ignore[call-arg]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+requests.exceptions.HTTPError: [Errno 409 Client Error: Conflict for url: https://api.smith.langchain.com/datasets/fb962127-71df-4b2e-9e05-9360ccd29791/share] {"detail":"Dataset already shared"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\evidencias\ferramentas\publica_experimento.py", line 510, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\evidencias\ferramentas\publica_experimento.py", line 436, in main
+    publica_links(client, dataset_nome, estado)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\evidencias\ferramentas\publica_experimento.py", line 272, in publica_links
+    compartilhado = client.share_dataset(dataset_name=dataset_nome)
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\venv\Lib\site-packages\langsmith\client.py", line 2614, in share_dataset
+    response = self.request_with_retries(
+        "PUT",
+    ...<2 lines>...
+        json=data,
+    )
+  File "C:\Users\ricar\source\repos\MBA IA\Desafios\mba-ia-pull-evaluation-prompt\venv\Lib\site-packages\langsmith\client.py", line 804, in request_with_retries
+    raise ls_utils.LangSmithConflictError(
+        f"Conflict for {pathname}. {repr(e)}" f"{_context}"
+    )
+langsmith.utils.LangSmithConflictError: Conflict for /datasets/fb962127-71df-4b2e-9e05-9360ccd29791/share. HTTPError('409 Client Error: Conflict for url: https://api.smith.langchain.com/datasets/fb962127-71df-4b2e-9e05-9360ccd29791/share', '{"detail":"Dataset already shared"}')
+
+==============================================================================
+LINKS PUBLICOS
+==============================================================================
+(dataset ja estava compartilhado, reusando o mesmo link)
+dataset  https://smith.langchain.com/public/b1b50576-9889-4351-8126-398830b26cb3/d
+         HTTP 200 sem credencial, 15 exemplos
+         1 experimento(s) na pagina publica:
+           - v2-iteracao-12-final-2a7ef724
+         agregado do cabecalho publico (local: n=15):
+           helpfulness    n=14  avg=0.8829 <- n diferente
+           correctness    n=14  avg=0.8425 <- n diferente
+           f1_score       n=14  avg=0.8157 <- n diferente
+           clarity        n=14  avg=0.8964 <- n diferente
+           precision      n=14  avg=0.8693 <- n diferente
+trace simple   pos 1   https://smith.langchain.com/public/07b169ee-c1c7-4b23-8540-70c6041960a9/r  HTTP 200
+trace medium   pos 6   https://smith.langchain.com/public/c74d2c7e-413a-41c2-bc0f-3ab54b63e187/r  HTTP 200
+trace complex  pos 13  https://smith.langchain.com/public/bbe9e000-a5a7-4bd3-8b3d-f384f2e57fae/r  HTTP 200
+
+Escrito: evidencias\links-publicos.md
