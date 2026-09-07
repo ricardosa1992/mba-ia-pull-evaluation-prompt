@@ -48,3 +48,14 @@ ENV/
 screenshots/
 results/
 .claude/
+
+# Material de apoio local, fora da entrega.
+# Da pasta evidencias/ sobem apenas as 6 capturas que o README embute.
+MISSOES.md
+evidencias/ferramentas/
+evidencias/rodadas/
+evidencias/versoes-do-prompt/
+evidencias/INDICE.md
+evidencias/links-publicos.md
+evidencias/experimento-publicado.json
+evidencias/capturas/README.md
